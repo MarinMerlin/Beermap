@@ -1,0 +1,42 @@
+{
+  "name": "biere",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "prix": {
+      "type": "number",
+      "required": true
+    },
+    "id_type_biere": {
+      "type": "string",
+      "required": true
+    },
+    "id_supermarche": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "typeBiere": {
+      "type": "belongsTo",
+      "model": "type_biere",
+      "foreignKey": "id_type_biere"
+    },
+    "supermarche": {
+      "type": "belongsTo",
+      "model": "supermarche",
+      "foreignKey": "id_supermarche"
+    },
+    "consomation": {
+      "type": "hasMany",
+      "model": "historique",
+      "foreignKey": "id_biere"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

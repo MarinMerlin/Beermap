@@ -1,0 +1,40 @@
+{
+  "name": "review",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "id_type_biere": {
+      "type": "string",
+      "required": true
+    },
+    "id_util": {
+      "type": "string",
+      "required": true
+    },
+    "content": {
+      "type": "string"
+    },
+    "note": {
+      "type": "number",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "typeBiere": {
+      "type": "belongsTo",
+      "model": "type_biere",
+      "foreignKey": "id_type_biere"
+    },
+    "utilisateur": {
+      "type": "belongsTo",
+      "model": "utilisateur",
+      "foreignKey": "id_util"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

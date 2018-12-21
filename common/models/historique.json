@@ -1,0 +1,37 @@
+{
+  "name": "historique",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "id_util": {
+      "type": "string",
+      "required": true
+    },
+    "date": {
+      "type": "date",
+      "required": true
+    },
+    "id_biere": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "biere": {
+      "type": "belongsTo",
+      "model": "biere",
+      "foreignKey": "id_biere"
+    },
+    "utilisateur": {
+      "type": "belongsTo",
+      "model": "utilisateur",
+      "foreignKey": "id_util"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

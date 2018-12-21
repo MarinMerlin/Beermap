@@ -1,0 +1,40 @@
+{
+  "_meta": {
+    "sources": [
+      "loopback/common/models",
+      "loopback/server/models",
+      "../common/models",
+      "./models"
+    ],
+    "mixins": [
+      "loopback/common/mixins",
+      "loopback/server/mixins",
+      "../common/mixins",
+      "./mixins"
+    ]
+  },
+  "type_biere": {
+    "dataSource": "bdd_biere",
+    "public": true
+  },
+  "biere": {
+    "dataSource": "bdd_biere",
+    "public": true
+  },
+  "supermarche": {
+    "dataSource": "bdd_biere",
+    "public": true
+  },
+  "historique": {
+    "dataSource": "bdd_biere",
+    "public": true
+  },
+  "review": {
+    "dataSource": "bdd_biere",
+    "public": true
+  },
+  "utilisateur": {
+    "dataSource": "bdd_biere",
+    "public": true
+  }
+}

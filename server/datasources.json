@@ -1,0 +1,12 @@
+{
+  "bdd_biere": {
+    "host": "localhost",
+    "port": 5432,
+    "url": "",
+    "database": "postgres",
+    "password": "lemotdepasse",
+    "name": "bdd_biere",
+    "user": "postgres",
+    "connector": "postgresql"
+  }
+}

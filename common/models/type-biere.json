@@ -1,0 +1,41 @@
+{
+  "name": "type_biere",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "nom": {
+      "type": "string",
+      "required": true
+    },
+    "degre": {
+      "type": "number",
+      "required": true
+    },
+    "note": {
+      "type": "number",
+      "required": false
+    },
+    "descr": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "validations": [],
+  "relations": {
+    "bieres": {
+      "type": "hasMany",
+      "model": "biere",
+      "foreignKey": "id_type_biere"
+    },
+    "reviews": {
+      "type": "hasMany",
+      "model": "review",
+      "foreignKey": "id_type_biere"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

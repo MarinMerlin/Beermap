@@ -1,0 +1,38 @@
+{
+  "name": "supermarche",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "type_sup": {
+      "type": "string"
+    },
+    "nom": {
+      "type": "string",
+      "required": true
+    },
+    "location": {
+      "type": [
+        "string"
+      ],
+      "required": true
+    },
+    "horaire": {
+      "type": [
+        "number"
+      ]
+    }
+  },
+  "validations": [],
+  "relations": {
+    "bieres": {
+      "type": "hasMany",
+      "model": "biere",
+      "foreignKey": "id_supermarche"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

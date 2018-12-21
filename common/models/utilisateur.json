@@ -1,0 +1,42 @@
+{
+  "name": "utilisateur",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "username": {
+      "type": "string",
+      "required": true
+    },
+    "salt": {
+      "type": "string",
+      "required": true
+    },
+    "hash": {
+      "type": "string",
+      "required": true
+    },
+    "exp": {
+      "type": [
+        "number"
+      ]
+    }
+  },
+  "validations": [],
+  "relations": {
+    "reviews": {
+      "type": "hasMany",
+      "model": "review",
+      "foreignKey": "id_util"
+    },
+    "consommation": {
+      "type": "hasMany",
+      "model": "historique",
+      "foreignKey": "id_util"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
